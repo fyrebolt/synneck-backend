@@ -1,0 +1,6 @@
+{
+  "max_abs_error": 0.0007415413856506348,
+  "mean_abs_error": 0.00014818857016507536,
+  "cosine_similarity": 0.9999999403953552,
+  "mode": "input_quantization_only"
+}
