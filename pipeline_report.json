@@ -1,0 +1,72 @@
+{
+  "data": {
+    "status": "generated",
+    "n_samples": 1000,
+    "data_shape": [
+      1000,
+      6,
+      100
+    ],
+    "labels_shape": [
+      1000,
+      3
+    ]
+  },
+  "training": {
+    "model_path": "/Users/hastinchen/synneck-backend/.claude/worktrees/busy-boyd/models/trained_model.pth",
+    "best_val_loss": 0.056500811129808426,
+    "num_epochs_trained": 20,
+    "final_metrics": {
+      "loss": 0.056500811129808426,
+      "mae_valve_extension": 0.1546870470046997,
+      "mae_force_magnitude": 0.15012092888355255,
+      "mae_trigger_delay": 0.16721847653388977
+    }
+  },
+  "validation": {
+    "overall_regression": {
+      "valve_extension": {
+        "mse": 0.2751289904117584,
+        "mae": 0.42268696427345276,
+        "r2": -1.4933266639709473
+      },
+      "force_magnitude": {
+        "mse": 0.1408834010362625,
+        "mae": 0.3126203715801239,
+        "r2": -0.4606325626373291
+      },
+      "trigger_delay": {
+        "mse": 0.029270203784108162,
+        "mae": 0.14495731890201569,
+        "r2": -0.4970647096633911
+      }
+    },
+    "overall_classification": {
+      "accuracy": 0.36333333333333334,
+      "sensitivity": 0.09359605911330049,
+      "specificity": 0.9278350515463918,
+      "fpr": 0.07216494845360824,
+      "auc": 0.5231323955106393
+    }
+  },
+  "quantization": {
+    "max_abs_error": 0.0007415413856506348,
+    "mean_abs_error": 0.00014818857016507536,
+    "cosine_similarity": 0.9999999403953552,
+    "mode": "input_quantization_only"
+  },
+  "arduino_conversion": {
+    "status": "success"
+  },
+  "realtime": {
+    "mean_latency_ms": 0.10446646041236818,
+    "p95_latency_ms": 0.11902508558705446,
+    "real_time_factor": 4366.812274953675
+  },
+  "arduino_tests": {
+    "flash_ok": true,
+    "ram_ok": false,
+    "safety_ok": true,
+    "inference_ok": true
+  }
+}

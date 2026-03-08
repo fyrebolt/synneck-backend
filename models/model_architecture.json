@@ -1,0 +1,64 @@
+{
+  "model_name": "MEGStrokeNet",
+  "num_channels": 6,
+  "num_timepoints": 100,
+  "num_outputs": 3,
+  "layers": [
+    {
+      "name": "conv1",
+      "type": "Conv1d",
+      "in_channels": 6,
+      "out_channels": 16,
+      "kernel_size": 5,
+      "stride": 2,
+      "padding": 2,
+      "has_bias": true
+    },
+    {
+      "name": "bn1",
+      "type": "BatchNorm1d",
+      "num_features": 16
+    },
+    {
+      "name": "conv2",
+      "type": "Conv1d",
+      "in_channels": 16,
+      "out_channels": 32,
+      "kernel_size": 3,
+      "stride": 2,
+      "padding": 1,
+      "has_bias": true
+    },
+    {
+      "name": "bn2",
+      "type": "BatchNorm1d",
+      "num_features": 32
+    },
+    {
+      "name": "conv3",
+      "type": "Conv1d",
+      "in_channels": 32,
+      "out_channels": 16,
+      "kernel_size": 3,
+      "stride": 2,
+      "padding": 1,
+      "has_bias": true
+    },
+    {
+      "name": "fc1",
+      "type": "Linear",
+      "in_features": 16,
+      "out_features": 8,
+      "has_bias": true
+    },
+    {
+      "name": "fc2",
+      "type": "Linear",
+      "in_features": 8,
+      "out_features": 3,
+      "has_bias": true
+    }
+  ],
+  "total_params": 3875,
+  "total_params_bytes_fp32": 15500
+}
